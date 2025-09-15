@@ -1,0 +1,101 @@
+/* Enhanced profile image video-like animations */
+.profile-animate {
+    animation: profilePop 1.2s cubic-bezier(0.23, 1, 0.32, 1), profileGlow 2.5s ease-in-out infinite, profileFloat 3.5s ease-in-out infinite;
+    box-shadow: 0 0 0 0 rgba(0,123,255,0.5);
+}
+
+@keyframes profilePop {
+    0% {
+        opacity: 0;
+        transform: scale(0.7) rotate(-10deg);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.1) rotate(5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes profileGlow {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(0,123,255,0.5);
+    }
+    50% {
+        box-shadow: 0 0 40px 10px rgba(0,123,255,0.25);
+    }
+}
+
+@keyframes profileFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+/* Profile image animation */
+.profile-animate {
+    animation: profilePop 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes profilePop {
+    0% {
+        opacity: 0;
+        transform: scale(0.7) rotate(-10deg);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.1) rotate(5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+}
+header {
+    background: linear-gradient(90deg, #007bff 60%, #00c6ff 100%);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.navbar {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.timeline {
+    list-style: none;
+    padding-left: 0;
+    position: relative;
+}
+.timeline li {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+.timeline li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 10px;
+    height: 10px;
+    background: #007bff;
+    border-radius: 50%;
+}
+.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,123,255,0.15);
+}
+footer {
+    background: #222;
+}
+#formAlert {
+    transition: opacity 0.5s;
+}
