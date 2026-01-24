@@ -99,3 +99,510 @@ footer {
 #formAlert {
     transition: opacity 0.5s;
 }
+
+.hero-split {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 22px;
+    align-items: stretch;
+    margin-top: 28px;
+}
+
+.hero-panel {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 18px;
+    padding: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.code-editor {
+    border-radius: 14px;
+    background: rgba(15, 24, 40, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+}
+
+.code-editor-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    background: rgba(10, 18, 30, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.code-dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 4px;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.code-tabs {
+    display: flex;
+    gap: 8px;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.code-tab {
+    padding: 4px 8px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.code-tab.active {
+    background: rgba(0, 123, 255, 0.25);
+    color: #f4f9ff;
+}
+
+.code-editor-body {
+    padding: 10px 8px 8px;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 0.82rem;
+    color: #e6f2ff;
+}
+
+.code-line {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.code-line .line-no {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.code-line:hover,
+.code-line.active {
+    background: rgba(0, 123, 255, 0.2);
+}
+
+.code-line.active .line-code::after {
+    content: "|";
+    margin-left: 4px;
+    opacity: 0.7;
+    animation: blinkCaret 1s step-end infinite;
+}
+
+.code-info {
+    margin-top: 12px;
+    text-align: left;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: rgba(10, 18, 34, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.code-info h5 {
+    margin: 0 0 6px;
+    font-size: 0.95rem;
+}
+
+.code-info p {
+    margin: 0 0 6px;
+    font-size: 0.82rem;
+    opacity: 0.85;
+}
+
+.code-info ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 0.82rem;
+}
+
+.ui-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ui-preview {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 12px;
+    text-align: left;
+}
+
+.ui-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.ui-status {
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: rgba(0, 123, 255, 0.25);
+}
+
+.ui-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.ui-stat {
+    padding: 8px;
+    border-radius: 10px;
+    background: rgba(10, 18, 34, 0.6);
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.ui-body {
+    display: grid;
+    gap: 10px;
+}
+
+.ui-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.ui-card {
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(15, 24, 40, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.75rem;
+}
+
+.ui-card-title {
+    font-weight: 600;
+}
+
+.ui-card-meta {
+    opacity: 0.75;
+}
+
+.ui-response {
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(8, 16, 28, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.78rem;
+}
+
+.ui-preview [data-ui].is-active {
+    border: 1px solid rgba(0, 210, 255, 0.6);
+    box-shadow: 0 0 18px rgba(0, 210, 255, 0.35);
+}
+
+.ui-caption {
+    margin: 0;
+    font-size: 0.82rem;
+    opacity: 0.85;
+    text-align: center;
+}
+
+@keyframes blinkCaret {
+    0%, 50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.arch-tagline {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    letter-spacing: 0.4px;
+}
+
+.arch-visual {
+    position: relative;
+    margin: 0 auto;
+    width: min(720px, 92vw);
+    height: 320px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+
+.arch-lines {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.arch-lines line {
+    stroke: rgba(255, 255, 255, 0.35);
+    stroke-width: 2;
+    stroke-dasharray: 6 8;
+    stroke-dashoffset: 20;
+    transition: stroke 0.3s ease, stroke-dashoffset 0.3s ease, opacity 0.3s ease;
+    opacity: 0.4;
+}
+
+.arch-lines line.line-active {
+    stroke: rgba(255, 255, 255, 0.95);
+    stroke-dashoffset: 0;
+    opacity: 0.9;
+}
+
+.arch-card {
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: 180px;
+    transform: translate3d(var(--px, 0px), var(--py, 0px), 0);
+    transition: transform 0.2s ease;
+    z-index: 2;
+    cursor: pointer;
+    user-select: none;
+}
+
+.arch-card-inner {
+    padding: 14px 16px;
+    border-radius: 14px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    color: #f8fbff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    animation: archFloat 5s ease-in-out infinite;
+}
+
+.arch-card h6 {
+    margin: 0 0 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.arch-card p {
+    margin: 0;
+    font-size: 0.82rem;
+    opacity: 0.9;
+}
+
+.arch-card:hover .arch-card-inner {
+    transform: translate3d(0, -6px, 0) scale(1.02);
+    box-shadow: 0 14px 36px rgba(0, 123, 255, 0.28);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.arch-card.is-active .arch-card-inner {
+    box-shadow: 0 14px 36px rgba(0, 210, 255, 0.45);
+}
+
+.arch-tooltip {
+    position: absolute;
+    max-width: 220px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: rgba(12, 22, 42, 0.92);
+    color: #eaf4ff;
+    font-size: 0.8rem;
+    line-height: 1.3;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.arch-tooltip.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes archFloat {
+    0%, 100% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(0, -10px, 0);
+    }
+}
+
+@media (max-width: 768px) {
+    .arch-visual {
+        height: 360px;
+    }
+    .arch-card {
+        width: 165px;
+    }
+    .hero-split {
+        grid-template-columns: 1fr;
+    }
+    .ui-stats {
+        grid-template-columns: 1fr;
+    }
+    .ui-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pipeline-section {
+    background: linear-gradient(120deg, #0d1f33 0%, #1a3554 100%);
+    color: #f5f9ff;
+}
+
+.pipeline-visual {
+    position: relative;
+    padding: 28px 24px 24px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+}
+
+.pipeline-flow {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 120px;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.pipeline-flow path {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.45);
+    stroke-width: 2.4;
+    stroke-dasharray: 10 12;
+    animation: flowDash 6s linear infinite;
+}
+
+.pipeline-nodes {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 12px;
+    align-items: center;
+    z-index: 2;
+    margin-bottom: 24px;
+}
+
+.pipeline-node {
+    position: relative;
+    border: 0;
+    padding: 14px 10px;
+    border-radius: 14px;
+    color: #eef6ff;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.82rem;
+    letter-spacing: 0.3px;
+    text-transform: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    animation: pipelineFloat 5.5s ease-in-out infinite;
+    cursor: pointer;
+}
+
+.pipeline-node:nth-child(odd) {
+    animation-delay: 0.6s;
+}
+
+.pipeline-node:nth-child(even) {
+    animation-delay: 1.2s;
+}
+
+.pipeline-node span {
+    display: inline-block;
+}
+
+.pipeline-node:hover,
+.pipeline-node.is-active {
+    transform: translateY(-6px);
+    border-color: rgba(255, 255, 255, 0.55);
+    box-shadow: 0 14px 32px rgba(0, 123, 255, 0.3);
+}
+
+.pipeline-node.is-locked {
+    box-shadow: 0 16px 36px rgba(0, 210, 255, 0.45);
+}
+
+.pipeline-panel {
+    position: relative;
+    margin: 0 auto;
+    max-width: 640px;
+    padding: 16px 18px;
+    border-radius: 14px;
+    background: rgba(10, 18, 34, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(6px);
+    min-height: 120px;
+}
+
+.pipeline-panel h5 {
+    margin: 0 0 6px;
+    font-size: 1rem;
+}
+
+.pipeline-panel p {
+    margin: 0 0 8px;
+    opacity: 0.85;
+    font-size: 0.88rem;
+}
+
+.pipeline-panel ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 0.85rem;
+}
+
+.pipeline-panel ul li {
+    margin-bottom: 4px;
+}
+
+@keyframes flowDash {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: -110;
+    }
+}
+
+@keyframes pipelineFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@media (max-width: 992px) {
+    .pipeline-nodes {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        row-gap: 12px;
+    }
+    .pipeline-flow {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .pipeline-nodes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .pipeline-panel {
+        text-align: left;
+    }
+}
